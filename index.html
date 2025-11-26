@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SukkaSankarit</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      transition: background 0.3s, color 0.3s;
+    }
+    body.dark { background:#1e1e1e; color:#ddd; }
+    header, footer { background: #1a73e8; color: white; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; transition: background 0.3s; }
+    body.dark header, body.dark footer { background:#111; }
+    nav a { margin-left: 20px; color: white; text-decoration: none; font-weight: bold; }
+    .hero { padding: 100px 40px; text-align: center; background: white; transition: background 0.3s; }
+    body.dark .hero { background:#2a2a2a; }
+    .hero h1 { font-size: 48px; margin-bottom: 10px; }
+    .hero p { font-size: 20px; color: #555; max-width: 600px; margin: 0 auto 30px; }
+    .btn { padding: 12px 24px; background: #1a73e8; color: white; border-radius: 6px; text-decoration: none; font-size: 18px; }
+    .section { padding: 80px 40px; text-align: center; }
+    .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 40px; }
+    .card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); opacity: 0; animation: fadein 1s ease forwards; }
+    body.dark .card { background:#2a2a2a; }
+    @keyframes fadein { to { opacity:1; } }
+    footer { text-align: center; margin-top: 40px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">SukkaSankarit</div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <button id="modeToggle" class="btn" style="background:#333; margin-left:20px;">Toggle Mode</button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>We Help Your Business Grow</h1>
+    <p>Professional and modern solutions to help take your brand to the next level. Clean, easy to use, and designed for success.</p>
+    <a class="btn" href="#contact">Get Started</a>
+  </section>
+
+  <section id="services" class="section">
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="card">
+        <h3>Consulting</h3>
+        <p>Professional guidance tailored to your business needs.</p>
+      </div>
+      <div class="card">
+        <h3>Web Design</h3>
+        <p>Modern, responsive websites built to impress customers.</p>
+      </div>
+      <div class="card">
+        <h3>Marketing</h3>
+        <p>Strategies to grow your brand and reach new audiences.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="products" class="section">
+    <h2>Our Products</h2>
+    <div class="services">
+      <div class="card">
+        <h3>Premium Socks</h3>
+        <p>High-quality comfort socks for everyday use.</p>
+      </div>
+      <div class="card">
+        <h3>Sport Socks</h3>
+        <p>Durable performance socks for active users.</p>
+      </div>
+      <div class="card">
+        <h3>Custom Socks</h3>
+        <p>Create your own personalized sock designs.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <p>We are a modern digital-focused company helping businesses grow through technology and strategy.</p>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p>Email: contact@sukkasankarit.com</p>
+    <p>Phone: +123 456 7890</p>
+  </section>
+
+  <footer>
+    © 2025 SukkaSankarit. All rights reserved.
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('modeToggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+    });
+  </script>
+</body>
+</html>
