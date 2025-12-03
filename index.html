@@ -1,1 +1,230 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SukkaSankarit</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Inter", Arial, sans-serif;
+      background: #f3f4f6;
+      color: #222;
+      transition: background 0.3s, color 0.3s;
+    }
+    body.dark { background:#121212; color:#e5e5e5; }
 
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #4f46e5;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      transition: background 0.3s;
+    }
+    body.dark header { background:#1e1e1e; }
+
+    nav a {
+      margin-left: 20px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .hero {
+      padding: 120px 40px;
+      text-align: center;
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      color: white;
+    }
+    body.dark .hero { background: linear-gradient(135deg, #1f1f1f, #3a3a3a); }
+
+    .hero h1 {
+      font-size: 58px;
+      margin-bottom: 15px;
+      font-weight: 800;
+    }
+    .hero p {
+      font-size: 22px;
+      max-width: 650px;
+      margin: 0 auto 35px;
+      opacity: 0.95;
+    }
+
+    .btn {
+      padding: 16px 38px;
+      background: linear-gradient(135deg, #ffffff, #e5e7eb);
+      color: #4f46e5;
+      border-radius: 14px;
+      text-decoration: none;
+      font-size: 19px;
+      font-weight: 700;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+      transition: all 0.35s ease;
+      border: 2px solid #ffffff;
+      display: inline-block;
+    }
+    .btn:hover {
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 10px 35px rgba(0,0,0,0.22);
+      background: linear-gradient(135deg, #f3f4f6, #ffffff);
+    }
+
+    .section {
+      padding: 90px 40px;
+      text-align: center;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+
+    .card {
+      background: white;
+      padding: 55px 45px;
+      border-radius: 32px;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.10);
+      opacity: 0;
+      animation: fadein 1s ease forwards;
+      text-align: center;
+      transition: all 0.35s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      border: 1px solid #e5e7eb;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 45px rgba(0,0,0,0.18);
+      border-color: #c7d2fe;
+    }
+    body.dark .card {
+      background:#1e1e1e;
+      border-color:#333;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.45);
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.18);
+    }
+    body.dark .card { background:#1f1f1f; }
+
+    
+
+    @keyframes fadein { to { opacity:1; } }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      padding: 30px;
+      background: #4f46e5;
+      color: white;
+    }
+    body.dark footer { background:#1e1e1e; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">SukkaSankarit</div>
+    <nav>
+      <a href="#services">Palvelut</a>
+      <a href="#products">Tuotteet</a>
+      <a href="#about">Tietoa meistä</a>
+      <a href="#contact">Yhteystiedot</a>
+      <button id="modeToggle" class="btn" style="background:#333; margin-left:20px;">Vaihda tila</button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Modernit ja kestävät sukat joka päivään</h1>
+    <p>Tarjoamme laadukkaita, mukavia ja ympäristöystävällisiä sukkia, jotka kestävät käyttöä ja näyttävät hyvältä.</p>
+    <a class="btn" href="#products">Tutustu valikoimaan</a>
+  </section>
+
+  <section id="services" class="section">
+    <h2>Miksi valita sukkamme?</h2>
+    <div class="services">
+      <div class="card">
+        <h3>Kestävä materiaali</h3>
+        <p>Sukkamme valmistetaan pitkäikäisistä ja vastuullisista materiaaleista.</p>
+      </div>
+      <div class="card">
+        <h3>Äärimmäinen mukavuus</h3>
+        <p>Suunniteltu tuntumaan hyvältä koko päivän ajan – arkeen ja urheiluun.</p>
+      </div>
+      <div class="card">
+        <h3>Moderni design</h3>
+        <p>Tyylikkäät, minimalistiset ja huolella viimeistellyt sukat.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="products" class="section">
+    <h2>Tuotteemme</h2>
+    <div class="services">
+      <div class="card">
+        
+        <h3>Laatusukat</h3>
+        <p>Sopivat jokapäiväiseen käyttöön ja tarjoavat erinomaista mukavuutta.</p>
+      </div>
+      <div class="card">
+        
+        <h3>Urheilusukat</h3>
+        <p>Kestävät ja hengittävät sukat aktiiviseen elämäntyyliin.</p>
+      </div>
+      <div class="card">
+        
+        <h3>Personoidut sukat</h3>
+        <p>Suunnittele omat uniikit sukkasi.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <h2>Meistä</h2>
+    <p>SukkaSankarit on kotimainen yritys, joka keskittyy valmistamaan kestäviä, korkealaatuisia ja moderneja sukkia. Haluamme yhdistää mukavuuden, tyylin ja ekologisuuden.</p>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Yhteystiedot</h2>
+    <p>Sähköposti: snissarna@gmail.com</p>
+    
+  </section>
+
+  <footer style="padding: 60px 40px; background: #111827; color: white;">
+    <div style="max-width: 1100px; margin: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; text-align: left;">
+      <div>
+        <h3 style="font-size: 22px; margin-bottom: 18px; font-weight: 700;">SukkaSankarit</h3>
+        <p>Korkealaatuiset ja kestävät sukat arkeen, urheiluun ja tyyliin.</p>
+      </div>
+      <div>
+        <h4 style="font-size: 18px; margin-bottom: 12px;">Navigaatio</h4>
+        <p><a href="#products" style="color:white; text-decoration:none; opacity:0.8;">Tuotteet</a></p>
+        <p><a href="#about" style="color:white; text-decoration:none; opacity:0.8;">Tietoa meistä</a></p>
+        <p><a href="#contact" style="color:white; text-decoration:none; opacity:0.8;">Yhteystiedot</a></p>
+      </div>
+      <div>
+        <h4 style="font-size: 18px; margin-bottom: 12px;">Yhteys</h4>
+        <p>Sähköposti: snissarna@gmail.com</p>
+        
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:40px; opacity:0.6; font-size:14px;">© 2025 SukkaSankarit – Kaikki oikeudet pidätetään.</div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('modeToggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+    });
+  </script>
+</body>
+</html>
